@@ -12,11 +12,6 @@ if the moon object is clicked a drark mode will be toggeld.
 const sunIcon = document.querySelector('.sun');
 const moonIcon = document.querySelector('.moon');
 
-if(!sunIcon || !moonIcon){
-    console.log(sunIcon);
-    console.log(moonIcon);
-    //return new Error('Please read the applyDarkTheme.js description\nNo .sun class button was found or no .moon class was found');
-}
 
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
