@@ -8,82 +8,119 @@
   </head>
 
 <body class="h-screen dark:bg-gray-800">
-    <header>
-      <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-           <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-           <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
-           </a>
-           <div class="flex items-center gap-4 md:order-2 space-x-3">
-              <button type="button" id="profile-pic-button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
-               <span class="sr-only">Open user menu</span>
-               <img class="w-8 h-8 rounded-full" src="../Images/avatar-anisha.png" alt="user photo">
-              </button>
-              <!-- Dropdown menu -->
-              <div id="profile-pic-dropdown" class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute">
-                 <div class="px-4 py-3">
-                    <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
-                    <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
-                 </div>
-                 <ul class="py-2" aria-labelledby="user-menu-button">
-                    <li>
-                       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-                    </li>
-                    <li>
-                       <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
-                    </li>
-                 </ul>
-              </div>
-              <button  type="button" id="hamburg-button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
-                 <span class="sr-only">Open main menu</span>
-                 <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                 </svg>
-              </button>
-           </div>
-
-           <button data-tooltip-target="accordion-always-open-example-toggle-dark-mode-tooltip" type="button" data-toggle-dark="dark" class="flex items-center w-9 h-9 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-200 rounded-lg toggle-dark-state-example hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-               <svg data-toggle-icon="moon" class="moon w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
-                  <path d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z"></path>
-               </svg>
-               <svg data-toggle-icon="sun" class="sun w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z"></path>
-               </svg>
-               <span class="sr-only">Toggle dark/light mode class</span>
-            </button>
-           
-
-           <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
-              <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                 <li>
-                    <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
-                 </li>
-                 <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
-                 </li>
-                 <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-                 </li>
-                 <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
-                 </li>
-                 <li>
-                    <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
-                 </li>
-              </ul>
-           </div>
+   <div id="confirm-screen" class="backdrop hidden"></div>
+    <div id="modal" class="hidden mr-8 sm:ml-auto md:ml-4 lg:ml-20 sm:mr-none md:mr-none lg:mr-none fixed z-50 top-1/4 left-1/4 w-2/4 bg-white p-4 border-slate-950 shadow min-w-[237px] max-w-[400px]">
+        <h1 class="text-center my-4 font-bold text-xl">Confirm Addition?</h1>
+        <div class="bg-slate-400 shadow max-w-[400px]">
+         <ul>
+            <li class="flex gap-3 p-2">
+               <h5 class="font-bold">Category : </h5>
+               <p id="category-type-in-model" class=""></p>
+            </li>
+            <li class="flex gap-3 p-2">
+               <h5 class="font-bold">Amount of money : </h5>
+               <div class="flex gap-1">
+                  <span>$</span>
+                  <p id="amount-of-money-in-model" class=""></p>
+               </div>
+            </li>
+            <li class="flex gap-3 p-2">
+               <h5 class="font-bold">number of payments : </h5>
+               <p id="amount-of-payments-in-model" class=""></p>
+            </li>
+         </ul>
         </div>
-      </nav>
-    </header>
+        <div class="text-center mt-2">
+         <button id="yes-button" class="bg-green-500 text-black text-center p-2 text-base sm:text-lg font-bold" type="button">yes!</button>
+         <button id="no-button" class="bg-red-600 border-red-600 p-2 text-base sm:text-lg font-bold" type="button">No!</button>
+        </div>
+    </div>
 
-    <div class=" h-max flex flex-col items-center justify-center gap-8 mt-8 mb-10 dark:bg-gray-800">
+   <header>
+      <nav class="bg-blue-500 p-4">
+         <div class="container mx-auto flex justify-between items-center">
+           <a href="#" class="text-white font-bold text-xl">Budget Buddy</a>
+           <div
+             class="container mx-auto flex items-center justify-between gap-8 relative"
+           >
+             <button
+               id="menuBtn"
+               class="block sm:hidden bg-white text-blue-500 py-2 px-4 rounded-full hover:bg-blue-100 ml-auto"
+             >
+               &#9776; <!-- Hamburger Icon -->
+             </button>
+             <div class="sm:flex space-x-4 hidden">
+               <a href="#" class="hover:text-gray-300">Home</a>
+               <a href="features.html" class="hover:text-gray-300">Features</a>
+               <a href="aboutUs.html" class="hover:text-gray-300"
+                 >About Us</a
+               >
+               <a href="contactUs.html" class="hover:text-gray-300"
+                 >Contact Us</a
+               >
+               
+
+             </div>
+             
+             <div class="items-center sm:flex mr-2">
+               <button type="button" id="profile-pic-button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                  <span class="sr-only">Open user menu</span>
+                  <img class="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full" src="../Images/avatar-anisha.png" alt="user photo">
+                 </button>
+                 <!-- Dropdown menu -->
+                 <div id="profile-pic-dropdown" class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute top-11 right-1">
+                    <div class="px-4 py-3">
+                       <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                       <span class="block text-sm  text-gray-500 truncate dark:text-gray-400">razi@mograbi.net</span>
+                    </div>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                       
+                       <li>
+                          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
+                       </li>
+                       <li>
+                          <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
+                       </li>
+                       <li>
+                          <a href="../index.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                       </li>
+                       <li>
+                        <button type="button" data-toggle-dark="dark" class="flex items-center ml-2 mt-1 w-8 h-8 justify-center text-xs font-medium text-gray-700 bg-white border border-gray-700 rounded-lg hover:bg-gray-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-500 dark:bg-gray-800 focus:outline-none dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                           <svg data-toggle-icon="moon" class="moon w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                              <path d="M17.8 13.75a1 1 0 0 0-.859-.5A7.488 7.488 0 0 1 10.52 2a1 1 0 0 0 0-.969A1.035 1.035 0 0 0 9.687.5h-.113a9.5 9.5 0 1 0 8.222 14.247 1 1 0 0 0 .004-.997Z"></path>
+                           </svg>
+                           <svg data-toggle-icon="sun" class="sun w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path d="M10 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-11a1 1 0 0 0 1-1V1a1 1 0 0 0-2 0v2a1 1 0 0 0 1 1Zm0 12a1 1 0 0 0-1 1v2a1 1 0 1 0 2 0v-2a1 1 0 0 0-1-1ZM4.343 5.757a1 1 0 0 0 1.414-1.414L4.343 2.929a1 1 0 0 0-1.414 1.414l1.414 1.414Zm11.314 8.486a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM4 10a1 1 0 0 0-1-1H1a1 1 0 0 0 0 2h2a1 1 0 0 0 1-1Zm15-1h-2a1 1 0 1 0 0 2h2a1 1 0 0 0 0-2ZM4.343 14.243l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414a1 1 0 0 0-1.414-1.414ZM14.95 6.05a1 1 0 0 0 .707-.293l1.414-1.414a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 .707 1.707Z"></path>
+                           </svg>
+                           <span class="sr-only">Toggle dark/light mode class</span>
+                        </button>
+                       </li>
+                    </ul>
+                 </div>
+             </div>
+   
+             <div
+               id="popupmenu"
+               class="justify-start gap-4 hidden sm:hidden absolute bg-blue-400 width-[70px] top-[60px] rounded-lg left-0 right-0 p-4 pb-6 border-black shadow"
+             >
+               <a href="#" class="text-white hover:text-gray-300 block">Home</a>
+               <a href="#features" class="text-white hover:text-gray-300 block">Features</a>
+               
+             </div>
+           </div>
+   
+         </div>
+       </nav>
+   </header>
+   <!-- Responsive Navigation Overlay -->
+   <div
+      id="menu-overlay"
+      class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
+   ></div>
+
+   
+
+   <div class=" h-max flex flex-col items-center justify-center gap-8 mt-8 mb-10 dark:bg-gray-800">
       <h2 class="my-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">Expenses/loans Addition</h2>
       <form class="max-w-sm mx-auto p-12 border rounded-md shadow">
          <label for="categoryButton" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Choose Category</label>
@@ -94,7 +131,7 @@
             </svg>
          </button>
          <!-- Dropdown menu -->
-         <div id="dropdown" class="z-10 mb-5 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+         <div id="dropdown" class="z-10 transition delay-150 mb-5 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
             <ul class="py-2 text-sm text-black dark:text-gray-200" >
                <li>
                   <a href="#" class="dropdown-link block px-4 py-2 hover:bg-gray-100  dark:hover:bg-gray-600 dark:hover:text-white">Shopping</a>
@@ -134,7 +171,7 @@
                The number of monthly payments.
              </div>
          </div>
-         <button type="submit" class="mt-10 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add Expense</button>
+         <button id="add-expense-button" type="submit" class="mt-10 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add Expense</button>
       </form>
 
       <!--Footer-->

@@ -3,10 +3,19 @@ const dropdown = document.getElementById('dropdown');
 const questionMark = document.getElementById('questionMark');
 const infoMessage = document.getElementById('infoMessage');
 const moneyLabel = document.getElementById('money-label');
-const hamburgButton = document.getElementById('hamburg-button');
-const navbarUser = document.getElementById('navbar-user');
 const profilePictureButton = document.getElementById('profile-pic-button');
+
+const confirmScreen = document.getElementById('confirm-screen');
+const modal = document.getElementById('modal');
+const categoryTypeInModel = document.getElementById('category-type-in-model');
+const amountOfMoneyInModel = document.getElementById('amount-of-money-in-model');
+const amountOfPaymentsInModel = document.getElementById('amount-of-payments-in-model');
+
+const addExpenseButton = document.getElementById('add-expense-button');
+
 const dropdownLinks = document.querySelectorAll('.dropdown-link');
+
+
 
 
 
@@ -19,12 +28,15 @@ questionMark.addEventListener('mouseout', ()=>{
     infoMessage.classList.add('hidden');
 });
 
-const toggleCategoryList = () => dropdown.classList.toggle('hidden');
+const toggleCategoryList = () =>{
+    dropdown.classList.toggle('hidden');
+};
 
+let currentlyChosenCategory = "Category";
 //handling category
 categoryButton.addEventListener('click', toggleCategoryList);
 
-
+// choosing a category from list action handle
 dropdownLinks.forEach(link => {
     link.addEventListener('click', (e)=>{
       
@@ -40,15 +52,17 @@ dropdownLinks.forEach(link => {
         }else{
             moneyLabel.textContent = "Amount Spent";
         }
-
+        currentlyChosenCategory = link.textContent;
     });
 });
 
 
 // hamburg button handle
 
-hamburgButton.addEventListener('click', () =>{
-    navbarUser.classList.toggle('hidden');
+const menuButton = document
+        .getElementById("menuBtn")
+        .addEventListener("click", () => {
+          document.getElementById("popupmenu").classList.toggle("hidden");
 });
 
 
@@ -56,4 +70,40 @@ hamburgButton.addEventListener('click', () =>{
 profilePictureButton.addEventListener('click', () =>{
     document.getElementById('profile-pic-dropdown').classList.toggle('hidden');
 });
+
+const toggleModel = ()=>{
+    confirmScreen.classList.toggle('hidden');
+    modal.classList.toggle('hidden');
+    categoryTypeInModel.textContent = currentlyChosenCategory;
+    amountOfMoneyInModel.textContent = document.getElementById('amount-of-money').value ;
+    amountOfPaymentsInModel.textContent = document.getElementById('number-of-payments').value;
+};
+
+
+addExpenseButton.addEventListener('click', (e)=>{
+    e.preventDefault();
+    if(currentlyChosenCategory === "Category"){
+        return;
+    }
+    toggleModel();
+});
+
+confirmScreen.addEventListener('click', ()=>{
+    toggleModel();
+});
+
+
+// yes and no button in the modal:
+document.getElementById('yes-button').addEventListener('click', ()=>{
+    toggleModel();
+    document.getElementById('amount-of-money').value = '';
+    document.getElementById('number-of-payments').value = '1';
+    return;
+});
+
+// no button inside thr modal
+document.getElementById('no-button').addEventListener('click', ()=>{
+    toggleModel();
+});
+
 
