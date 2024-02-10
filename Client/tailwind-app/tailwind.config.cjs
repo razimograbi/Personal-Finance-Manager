@@ -3,9 +3,7 @@ module.exports = {
   darkMode:"class",
   theme: {
     extend: {
-      width:{
-        '140': '40rem'
-      }
+    
 
     },
   },
