@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css">
     <title>Financial Goals</title>
+    <script src="../scripts/navigationUserScreen.js"></script>
 </head>
 
-
+<div id="navbar-container"></div>
 <body class="dark:bg-gray-700 dark:text-white p-4">
     <div class="max-w-[1000px] w-full mx-auto relative">
-        <div id="goalsContainer" class="container flex flex-col  p-2 my-2 mx-auto shadow-lg rounded-lg overflow-hidden bg-gray-200"> 
-            <a href="#" class="py-3 px-5 bg-gray-100 text-center">Goals Tracking</a>
+        
+        <h2 class="my-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">Goals Tracking</h2>
+        <div class="absolute bottom-56 left-[24rem] flex justify-center items-center w-full pb-8"> 
+            <a href="./pages/addGoal.html" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-12 rounded-md"> Add new goal</a>
+        </div>
+        
+        <div id="goalsContainer" class="container flex flex-col p-2 my-2 mx-auto overflow-hidden "> 
+            
         </div>  
     </div>
-   
+    
+    
     <script src="../main.js"> </script>
     <script>
         // Call the function to create the goals section
