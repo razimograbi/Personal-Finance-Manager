@@ -12,13 +12,15 @@ const goalRow = (goal) => {
     const dasharray = `${percentage} 100`;
 
     return `
-    <div class="bg-gray-600">
-        <div class="shadow p-2">${goal.name}<br>Goal amount: $${goal.goalAmount}<br>Amount saved: $${goal.amountSaved}<br>
-            <div class="w-full bg-gray-50 rounded-full dark:bg-gray-700 shadow">
-                <div class="bg-lime-500 text-xs font-medium text-gray-50 text-center p-0.5 leading-none rounded-full" style="width: ${percentage}%"> ${percentage}%</div>
+    
+        <div class="shadow p-2 m-2 dark:bg-gray-500 rounded-md">
+         <div class="text-xl font-bold ">${goal.name}</div>
+            Goal amount: $${goal.goalAmount}<br>Amount saved: $${goal.amountSaved}
+            <div class="w-full bg-gray-200 rounded-full dark:bg-gray-50 shadow">
+                <div class="bg-lime-500 text-xs font-medium text-gray-50 text-center font-bold p-0.5 leading-none rounded-full" style="width: ${percentage}%"> ${percentage}%</div>
             </div>
         </div>
-    </div>
+    
     `;
 
 
