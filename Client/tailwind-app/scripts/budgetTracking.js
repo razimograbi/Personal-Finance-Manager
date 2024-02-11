@@ -57,20 +57,20 @@ document.getElementById("monthPicker").addEventListener("change", function () {
 });
 
 // Function to toggle layout based on window width
-function toggleLayout() {
-  const layoutContainer = document.getElementById("layoutContainer");
-  if (window.innerWidth < 1000) {
-    // Example breakpoint for phones
-    layoutContainer.classList.remove("flex-row");
-    layoutContainer.classList.add("flex-col");
-  } else {
-    layoutContainer.classList.remove("flex-col");
-    layoutContainer.classList.add("flex-row");
-  }
-}
+// function toggleLayout() {
+//   const layoutContainer = document.getElementById("layoutContainer");
+//   if (window.innerWidth < 1000) {
+//     // Example breakpoint for phones
+//     layoutContainer.classList.remove("flex-row");
+//     layoutContainer.classList.add("flex-col");
+//   } else {
+//     layoutContainer.classList.remove("flex-col");
+//     layoutContainer.classList.add("flex-row");
+//   }
+// }
 
 // Initial toggle layout
-toggleLayout();
+// toggleLayout();
 
 // Toggle layout on window resize
-window.addEventListener("resize", toggleLayout);
+//window.addEventListener("resize", toggleLayout);
