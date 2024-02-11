@@ -121,12 +121,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div
           id="popupmenu"
-          class="justify-start gap-4 hidden sm:hidden absolute bg-blue-400 width-[70px] top-[60px] rounded-lg left-0 right-0 p-4 pb-6 border-black shadow"
+          class="z-40 justify-start gap-4 hidden sm:hidden absolute bg-blue-400 width-[70px] top-[60px] rounded-lg left-0 right-0 p-4 pb-6 border-black shadow"
         >
-          <a href="#" class="text-white hover:text-gray-300 block">Home</a>
-          <a href="#features" class="text-white hover:text-gray-300 block"
-            >Features</a
-          >
+          <a href="userHome.html" class="text-white hover:text-gray-300 block">Home</a>
+          <a href="budgetTracking.html" class="text-white hover:text-gray-300 block" >Budget Tracker</a>
+          <a href="goals.html" class="text-white hover:text-gray-300 block">Goals</a>
+          <a href="contactUs.html" class="text-white hover:text-gray-300 block" >Contact Us</a>
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
           `;
 
     // Insert navigation bar HTML into the element with id "navbar-container"
-      document.getElementById("navbar-container").innerHTML = navHTML;
+    document.getElementById("navbar-container").innerHTML = navHTML;
 
     const profilePictureButton = document.getElementById("profile-pic-button");
     profilePictureButton.addEventListener("click", () => {
@@ -144,12 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const menuButton = document
-        .getElementById("menuBtn")
-        .addEventListener("click", () => {
-          document.getElementById("popupmenu").classList.toggle("hidden");
-});
+      .getElementById("menuBtn")
+      .addEventListener("click", () => {
+        document.getElementById("popupmenu").classList.toggle("hidden");
+      });
 
-/*
+    /*
 this file handles the logic behind setting a dark mode/light mode on the website.
 
 To Use It : you must have a clickable dom object(button,div,anything) with a class of sun
@@ -160,53 +160,50 @@ if the moon object is clicked a drark mode will be toggeld.
 
 */
 
-const sunIcon = document.querySelector('.sun');
-const moonIcon = document.querySelector('.moon');
+    const sunIcon = document.querySelector(".sun");
+    const moonIcon = document.querySelector(".moon");
 
+    const userTheme = localStorage.getItem("theme");
+    const systemTheme = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
 
-const userTheme = localStorage.getItem("theme");
-const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    //toggle light/dark mode function
+    const iconToggle = () => {
+      moonIcon.classList.toggle("display-none");
+      sunIcon.classList.toggle("display-none");
+    };
 
-//toggle light/dark mode function
-const iconToggle = () => {
-    moonIcon.classList.toggle("display-none");
-    sunIcon.classList.toggle("display-none");
-};
-
-const themeCheck = () =>{
-    if(userTheme === "dark" || (!userTheme && systemTheme)){
+    const themeCheck = () => {
+      if (userTheme === "dark" || (!userTheme && systemTheme)) {
         document.documentElement.classList.add("dark");
         moonIcon.classList.add("display-none");
         return;
-    }
-    sunIcon.classList.add("display-none");
-};
+      }
+      sunIcon.classList.add("display-none");
+    };
 
-
-const themeSwitch = () => {
-    if(document.documentElement.classList.contains("dark")){
+    const themeSwitch = () => {
+      if (document.documentElement.classList.contains("dark")) {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
         iconToggle();
         return;
-    }
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-    iconToggle();
-};
+      }
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      iconToggle();
+    };
 
+    sunIcon.addEventListener("click", () => {
+      themeSwitch();
+    });
 
-sunIcon.addEventListener("click", () =>{
-    themeSwitch();
-});
+    moonIcon.addEventListener("click", () => {
+      themeSwitch();
+    });
 
-moonIcon.addEventListener("click", () =>{
-    themeSwitch();
-});
-
-themeCheck();
-
-
+    themeCheck();
   }
 
   function insertFooterBar() {
