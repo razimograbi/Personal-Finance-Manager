@@ -23,12 +23,7 @@
                 <p class="dark:text-white mb-2 font-bold">You've budgeted $6000 for this month</p>
                 <div class="flex flex-col gap-2 sm:flex-row">
                     
-                    <div class=" items-center relative flex-initial w-40 md:w-60 md:h-32 flex flex-col text-center shadow p-2  block-inline  mx-auto overflow-hidden  dark:bg-gray-900 dark:text-white dark:text-xl bg-gray-100 font-bold">
-                        <div class="flex flex-row items-center mt-4"> 
-                            <img class="w-8 block-inline" src="../Images/incomeIcon.png"> 
-                            <p class="mt-4 ml-2">Income</p> 
-                        </div>
-                        <div class="text-lime-700 dark:text-green-500 mt-2">$10000</div>
+                
                     
                     <div class=" items-center relative flex-initial w-40 md:w-60 md:h-32 flex flex-col text-center shadow p-2  block-inline  mx-auto overflow-hidden  dark:bg-gray-900 dark:text-white dark:text-xl bg-gray-100 font-bold">
                         <div class="flex flex-row items-center mt-4"> 
@@ -42,21 +37,8 @@
                             <img class="w-8 block-inline" src="../Images/Expenses.png"> 
                             <p class="mt-4 ml-2">Expenses</p> 
                         </div>
-                        <div class="text-rose-600 dark:text-red-700 mt-2">$2000</div>
-                    <div class=" items-center relative flex flex-initial w-40 md:w-60 md:h-32 flex-col text-center shadow p-2  mx-auto  dark:bg-gray-900 dark:text-white dark:text-xl font-bold bg-gray-100">
-                        <div class="flex flex-row items-center mt-4"> 
-                            <img class="w-8 block-inline" src="../Images/Expenses.png"> 
-                            <p class="mt-4 ml-2">Expenses</p> 
-                        </div>
-                        <div class="text-rose-600 dark:text-red-700 mt-2">$2000</div>
+                        <div class="text-rose-600 dark:text-red-700 mt-2">$2000</div>     
                     </div>
-                    <div class=" relative flex flex-col flex-initial w-40 md:w-60 md:h-32 text-center shadow p-2  mx-auto bg-gray-100 dark:bg-gray-900 dark:text-white dark:text-xl font-bold"> 
-                        <!-- <div class="text-blue-500 dark:to-blue-700">$4000</div> -->
-                        <div class="flex flex-row items-center mt-4"> 
-                            <img class="w-8 ml-6 mt-4 block-inline" src="../Images/money-bag-blue.png"> 
-                            <p class="mt-4 ml-1">Budget remain</p> 
-                        </div>
-                        <div class="text-blue-500  dark:to-blue-700">$4000</div>
                     <div class=" relative flex flex-col flex-initial w-40 md:w-60 md:h-32 text-center shadow p-2  mx-auto bg-gray-100 dark:bg-gray-900 dark:text-white dark:text-xl font-bold"> 
                         <!-- <div class="text-blue-500 dark:to-blue-700">$4000</div> -->
                         <div class="flex flex-row items-center mt-4"> 
@@ -75,14 +57,14 @@
                     
                         <div class=" container flex flex-col text-center p-6 my-2 shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[500px] max-h-[500px]">
                             <a href="#" class="py-3 px-5 bg-gray-100 dark:text-white dark:bg-gray-700 font-bold text-center">Expenses Tracking</a>
-                        <div class=" container flex flex-col text-center p-6 my-2 shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[500px] max-h-[500px]">
-                            <a href="#" class="py-3 px-5 bg-gray-100 dark:text-white dark:bg-gray-700 font-bold text-center">Expenses Tracking</a>
+                        
                             <canvas class="container flex p-10 dark:bg-gray-900" id="chartDoughnut"></canvas>
                           </div>
                           
                           <!-- Required chart.js -->
-                          <script src="../scripts/doughnutChart.js"></script>
-                          
+                          <!-- <script src="../scripts/doughnutChart.js"></script> -->
+                          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
                           <!-- Chart doughnut -->
                           <script>
                             const dataDoughnut = {
