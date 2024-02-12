@@ -11,7 +11,7 @@
   </head>
   <body class="bg-gray-900 text-white font-sans">
     <!-- Navigation Bar -->
-    <div id="navbar-container" class="fixed w-full -top-1"></div>
+    <div id="navbar-container" class="fixed w-full -top-1 z-20"></div>
 
     <!-- Responsive Navigation Overlay -->
     <div
@@ -19,9 +19,7 @@
       class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
     ></div>
 
-    <div class="mx-auto  h-80 w-full mt-28 bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" style="background-image:url(./Images/finance-photo.jpg);">
-      <h1 class="text-6xl sm:text-8xl mt-2 pt-10 dark:text-white text-center">Welcome!</h1>
-    </div>
+
 
     <!-- Hero Section -->
     <section class="bg-gray-800 text-white h-screen flex items-center">
@@ -39,12 +37,14 @@
         >
       </div>
     </section>
-
+    <div class="mx-auto  h-80 w-full mt-28 bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" style="background-image:url(./Images/wallpaperBudgetHome.jpg);">
+      <h1 class="text-6xl sm:text-8xl mt-2 pt-10 dark:text-white text-center"></h1>
+    </div>
     <!-- Features Section -->
     <section id="features" class="py-16">
       <div class="mx-auto text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-8">Key Features</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-6">
           <!-- Feature 1 -->
           <div class="p-8 bg-white rounded-lg shadow-md text-black">
             <h3 class="text-xl font-bold mb-4">Budget Management</h3>
@@ -65,7 +65,7 @@
 
           <!-- Feature 3 -->
           <div class="p-8 bg-white rounded-lg shadow-md text-black">
-            <h3 class="text-xl font-bold mb-4">Financial Insights</h3>
+            <h3 class="text-xl font-bold mb-4">Expenses Menotring</h3>
             <p>
               Gain valuable insights into your spending patterns and make
               informed financial decisions.
@@ -85,7 +85,7 @@
             <img
               src="/Images/about_us.jpg"
               alt=""
-              class="relative z-40 object-cover w-full h-96 rounded-3xl"
+              class="relative z-00 object-cover w-full h-96 rounded-3xl"
             />
           </div>
           <div class="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">

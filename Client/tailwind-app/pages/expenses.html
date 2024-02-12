@@ -8,13 +8,16 @@
     <script src="../scripts/navigationUserScreen.js"></script>
 </head>
 
-<body>
+<body class="dark:bg-gray-700">
     <div id="navbar-container" ></div>  
 
 
         <h2 class="my-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">Expenses monitoring </h2> 
 
-        <div class="flex flex-col justify-between ">
+        <div class="flex flex-col justify-between  ">
+            <div class="inline-block">
+                <a href="./expensesAddition.html" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold m-2 py-2 px-2 rounded-md"> Add Expense</a>
+                </div>
             <div class="flex flex-col md:flex-row">
                 <div class=" container  text-center p-6 my-2 shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[900px] max-h-[800px] mr-4">
                     <!-- bar chart code for income and expenses -->
@@ -23,7 +26,7 @@
                     </div>
                 </div>
                 <div class=" container flex flex-col text-center p-6 my-2 shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[500px] max-h-[500px]">
-                    <a href="#" class="py-3 px-5 bg-gray-100 dark:text-white dark:bg-gray-700 font-bold text-center">Expenses Categorization</a>
+                    <a  class="py-3 px-5 bg-gray-100 text-xl dark:text-white dark:bg-gray-700 font-bold text-center">Expenses Categorization</a>
                     <canvas class="container flex p-10 dark:bg-gray-900" id="chartDoughnut"></canvas>
                   </div>
                   
@@ -78,7 +81,7 @@
             <div class=" container flex flex-col space-x-2 mx-4 px-2">
                 <!-- Transcation activity-->
                 <div class="container flex flex-col p-2 my-2 mx-auto shadow-lg rounded-lg overflow-hidden dark:bg-gray-900 dark:border-solid dark:border-white max-w-[1200px] bg-gray-200"> 
-                    <a href="#" class="py-3 px-5 bg-gray-100 text-center dark:text-2xl font-bold dark:text-white dark:bg-gray-700">Latest Expenses</a>
+                    <a  class="py-3 px-5 bg-gray-100 text-center text-xl font-bold dark:text-white dark:bg-gray-700">Latest Expenses</a>
                         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8 ">
                           <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8 ">
                             <div class="overflow-hidden ">
@@ -125,7 +128,7 @@
                 <!--End of Latest transactions-->
                 <!--Upcoming expenses -->
                 <div class="container flex flex-col p-2 my-2 mb-16 mx-auto shadow-lg rounded-lg overflow-hidden dark:bg-gray-900 dark:border-solid dark:border-white max-w-[1200px] bg-gray-200"> 
-                    <a href="#" class="py-3 px-5 bg-gray-100 text-center dark:text-2xl font-bold dark:text-white dark:bg-gray-700">Upcoming Expenses</a>
+                    <a  class="py-3 px-5 bg-gray-100 text-center text-xl font-bold dark:text-white dark:bg-gray-700">Upcoming Expenses</a>
                         <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
                           <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
                             <div class="overflow-hidden">

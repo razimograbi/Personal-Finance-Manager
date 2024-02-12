@@ -14,7 +14,7 @@ const goalRow = (goal) => {
 
   return `
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <div class="bg-blue-700 dark:bg-blue-500 text-white p-4 mb-4 flex items-center">
+    <div class="bg-blue-700 dark:bg-gray-900 text-white p-4 mb-4 flex items-center">
       <div class="flex-grow">
           <h2 class="text-xl font-bold">${goal.name}</h2>
           <p>Goal Amount: $${goal.goalAmount}</p>
