@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="sm:flex space-x-4 hidden">
           <a href="userHome.html" class="hover:text-gray-300">Home</a>
           <a href="budgetTracking.html" class="hover:text-gray-300">Budgets</a>
-          <a href="goals.html" class="hover:text-gray-300">Goals</a>
-          <a href="expenses.html" class="hover:text-gray-300">Expenses</a>
+          <a href="goals1.html" class="hover:text-gray-300">Goals</a>
+          <a href="expenses1.html" class="hover:text-gray-300">Expenses</a>
           <a href="contactUs.html" class="hover:text-gray-300"
             >Contact Us</a
           >
@@ -122,11 +122,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div
           id="popupmenu"
-          class="z-40 justify-start gap-4 hidden sm:hidden absolute bg-blue-400 width-[70px] top-[60px] rounded-lg left-0 right-0 p-4 pb-6 border-black shadow"
+          class="z-50 justify-start gap-4 hidden sm:hidden absolute bg-blue-400 width-[70px] top-[60px] rounded-lg left-0 right-0 p-4 pb-6 border-black shadow"
         >
           <a href="userHome.html" class="text-white hover:text-gray-300 block">Home</a>
-          <a href="budgetTracking.html" class="text-white hover:text-gray-300 block" >Budget Tracker</a>
-          <a href="goals.html" class="text-white hover:text-gray-300 block">Goals</a>
+          <a href="budgetTracking.html" class="text-white hover:text-gray-300 block" >Budgets</a>
+          <a href="goals1.html" class="text-white hover:text-gray-300 block">Goals</a>
+          <a href="expenses1.html" class="text-white hover:text-gray-300 block">Expenses</a>
           <a href="contactUs.html" class="text-white hover:text-gray-300 block" >Contact Us</a>
         </div>
       </div>
