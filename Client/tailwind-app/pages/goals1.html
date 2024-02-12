@@ -1,119 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" crossorigin href="../style.css" />
-      <title>Add Goal</title>
-      <script src="../scripts/navigationUserScreen.js"></script>
-   </head>
-   <body class="h-screen dark:bg-gray-800">
-      <div id="confirm-screen" class="backdrop hidden"></div>
-      <div
-         id="modal"
-         class="hidden mr-8 sm:ml-auto md:ml-4 lg:ml-20 sm:mr-none md:mr-none lg:mr-none fixed z-50 top-1/4 left-1/4 w-2/4 bg-white p-4 border-slate-950 shadow min-w-[237px] max-w-[400px]">
-         <h1 class="text-center my-4 font-bold text-xl">Confirm Addition?</h1>
-         <div class="bg-slate-400 shadow max-w-[400px]">
-            <ul>
-                <li class="flex gap-3 p-2">
-                  <h5 class="font-bold">Name of Goal</h5>
-                  <p id="amount-of-payments-in-model" class=""></p>
-               </li>
-               <li class="flex gap-3 p-2">
-                  <h5 class="font-bold">Amount of money</h5>
-                  <div class="flex gap-1">
-                     <span>$</span>
-                     <p id="amount-of-money-in-model" class=""></p>
-                  </div>
-               </li>
-               
-            </ul>
-         </div>
-         <div class="text-center mt-2">
-            <button
-               id="yes-button"
-               class="bg-green-500 text-black text-center p-2 text-base sm:text-lg font-bold"
-               type="button"
-               >
-            yes!
-            </button>
-            <button
-               id="no-button"
-               class="bg-red-600 border-red-600 p-2 text-base sm:text-lg font-bold"
-               type="button"
-               >
-            No!
-            </button>
-         </div>
-      </div>
-      <header>
-         <nav id="navbar-container">
-         </nav>
-      </header>
-      <!-- Responsive Navigation Overlay -->
-      <div
-         id="menu-overlay"
-         class="md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 hidden"
-         ></div>
-      <div
-         class="h-max flex flex-col items-center justify-center gap-8 mt-8 mb-10 dark:bg-gray-800"
-         >
-         <h2
-            class="my-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">
-            Add New Goal
-         </h2>
-         <form class="max-w-sm mx-auto p-12 border rounded-md shadow">
-            <div class="relative flex flex-col gap-3 justify-center items-end mb-5">
-               <div>
-                  <label
-                     for="number-of-payments"
-                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                     >Name of Goal</label
-                     >
-                  <input
-                     type="text"
-                     id="name-of-goal"
-                     class="bg-gray-50 border border-gray-300 text-gray-900 max-w-44 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-4 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                     value=""
-                     required
-                     />
-               </div>
-               <div class="mb-5">
-                  <label
-                     id="money-label"
-                     for="amount-of-money"
-                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                     >Goal Amount</label>
-                  <div class="relative">
-                     <div
-                        class="absolute inset-y-0 start-0 top-0 flex items-center ps-3.5 pointer-events-none"
-                        >
-                        <img
-                           class="w-4 h-4 text-gray-500 dark:text-gray-400"
-                           src="../Images/dollar-sign-svgrepo-com.svg"
-                           alt="dollar-sign"
-                           />
-                     </div>
-                     <input
-                        type="number"
-                        id="amount-of-money"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 max-w-44 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                        required
-                        />
-                  </div>
-               </div>
-            </div>
-            <button
-               id="add-expense-button"
-               type="submit"
-               class="mt-10 ml-6 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-7 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-               >
-            Add Goal
-            </button>
-         </form>
-         <!--Footer-->
-      </div>
-      <footer class="bg-white dark:bg-gray-900 w-full  mt-5">
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css">
+    <title>Financial Goals</title>
+    <script src="../scripts/navigationUserScreen.js"></script>
+</head>
+
+
+<body class="dark:bg-gray-700 dark:text-white">
+
+  <div id="navbar-container"></div>
+    <div class="h-screen w-screen">
+    <div class="max-w-[1000px] w-full mx-auto relative">
+        
+        <h2 class="my-8 text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white text-center">Goals Tracking</h2>
+        <!-- <div class="container ml-[24rem] flex justify-center items-center w-full pb-8"> 
+            <a href="./pages/addGoal.html" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-12 rounded-md"> Add new goal</a>
+        </div> -->
+        
+        
+            <div id="goalsContainer" class="container flex flex-col p-2 my-2 mx-auto overflow-hidden "> 
+                <div class="inline-block">
+                <a href="./addGoal.html" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold m-2 py-2 px-2 rounded-md"> Add new goal</a>
+                </div>
+            </div>  
+       
+    </div>
+  </div>
+    
+    <script src="../main.js"> </script>
+    <script>
+        // Call the function to create the goals section
+        document.addEventListener("DOMContentLoaded", function() {
+    createGoalsSection();
+});
+    </script>
+    <script src="../applyDarkTheme.js" defer></script>
+    
+    <footer class="bg-white dark:bg-gray-900 w-full  mt-5">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
@@ -186,7 +113,7 @@
           />
           <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
-              >© 2024
+              >© 2023
               <a href="" class="hover:underline">Budget Buddy™</a
               >. All Rights Reserved.
             </span>
@@ -288,8 +215,7 @@
           </div>
         </div>
       </footer> 
-      <script src="../scripts/expensesAdditionLogic.js" defer></script>
-      <script src="../scripts/applyDarkTheme.js" defer></script>
-      <!-- we need to add navigation script -->
-   </body>
+</body>
+
+
 </html>
