@@ -22,8 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
         </button>
         <div class="sm:flex space-x-4 hidden">
           <a href="userHome.html" class="hover:text-gray-300">Home</a>
-          <a href="budgetTracking.html" class="hover:text-gray-300">Budget Tracker</a>
+          <a href="budgetTracking.html" class="hover:text-gray-300">Budgets</a>
           <a href="goals.html" class="hover:text-gray-300">Goals</a>
+          <a href="expenses.html" class="hover:text-gray-300">Expenses</a>
           <a href="contactUs.html" class="hover:text-gray-300"
             >Contact Us</a
           >
