@@ -9,7 +9,7 @@
     </head>
 
     <div id="navbar-container"></div>
-
+    <p class="container font-bold text-2xl md:ml-52 sm:ml-8 ml-8 mt-8">Welcome Bonnie,</p>
      <!-- Responsive Navigation Overlay -->
      <!-- <div
         id="menu-overlay"
@@ -19,17 +19,31 @@
     <body class="dark:bg-gray-700">
         <section class="" id="hero">
             <!--Income, spendings  section-->
-            <div class=" flex-initial  flex  flex-col items-center px-4 mx-auto mt-8 mb-6 space-x-2 space-y-0 md:space-y-0 text-lg  py-2">
-                <p class="dark:text-white">You've budgeted $6000 for this month</p>
+            <div class="container flex-initial  flex  flex-col items-center px-4 mx-auto mt-8 mb-6 space-x-2 space-y-0 md:space-y-0 text-lg  py-2">
+                <p class="dark:text-white mb-2 font-bold">You've budgeted $6000 for this month</p>
                 <div class="flex flex-col gap-2 sm:flex-row">
-                    <div class=" relative flex-initial w-40 md:w-60 md:h-32 flex flex-col text-center shadow p-2   mx-auto overflow-hidden  dark:bg-gray-900 dark:text-white dark:text-xl bg-gray-100 font-bold"> &#8593; Income 
-                        <div class="text-lime-700 dark:text-green-500">$10000</div>
+                    
+                    <div class=" items-center relative flex-initial w-40 md:w-60 md:h-32 flex flex-col text-center shadow p-2  block-inline  mx-auto overflow-hidden  dark:bg-gray-900 dark:text-white dark:text-xl bg-gray-100 font-bold">
+                        <div class="flex flex-row items-center mt-4"> 
+                            <img class="w-8 block-inline" src="../Images/incomeIcon.png"> 
+                            <p class="mt-4 ml-2">Income</p> 
+                        </div>
+                        <div class="text-lime-700 dark:text-green-500 mt-2">$10000</div>
                     </div>
-                    <div class=" relative flex flex-initial w-40 md:w-60 md:h-32 flex-col text-center shadow p-2  mx-auto  dark:bg-gray-900 dark:text-white dark:text-xl font-bold bg-gray-100"> &#8595; Expenses
-                        <div class="text-rose-600 dark:text-red-700">$2000</div>
+                    <div class=" items-center relative flex flex-initial w-40 md:w-60 md:h-32 flex-col text-center shadow p-2  mx-auto  dark:bg-gray-900 dark:text-white dark:text-xl font-bold bg-gray-100">
+                        <div class="flex flex-row items-center mt-4"> 
+                            <img class="w-8 block-inline" src="../Images/Expenses.png"> 
+                            <p class="mt-4 ml-2">Expenses</p> 
+                        </div>
+                        <div class="text-rose-600 dark:text-red-700 mt-2">$2000</div>
                     </div>
-                    <div class=" relative flex flex-col flex-initial w-40 md:w-60 md:h-32 text-center shadow p-2  mx-auto bg-gray-100 dark:bg-gray-900 dark:text-white dark:text-xl font-bold"> &#x2022; Budget remain 
-                        <div class="text-blue-500 dark:to-blue-700">$4000</div>
+                    <div class=" relative flex flex-col flex-initial w-40 md:w-60 md:h-32 text-center shadow p-2  mx-auto bg-gray-100 dark:bg-gray-900 dark:text-white dark:text-xl font-bold"> 
+                        <!-- <div class="text-blue-500 dark:to-blue-700">$4000</div> -->
+                        <div class="flex flex-row items-center mt-4"> 
+                            <img class="w-8 ml-6 mt-4 block-inline" src="../Images/money-bag-blue.png"> 
+                            <p class="mt-4 ml-1">Budget remain</p> 
+                        </div>
+                        <div class="text-blue-500  dark:to-blue-700">$4000</div>
                     </div>
                 </div>
             </div>
@@ -39,8 +53,8 @@
                 <div class=" container flex flex-col justify-center md:flex-row space-x-2 mx-4 px-2 ">
                     <!--expenses-->
                     
-                        <div class=" container flex flex-col text-center p-2 my-2 shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[500px] max-h-[500px]">
-                            <a href="#" class="py-3 px-5 bg-gray-100 dark:text-white dark:bg-gray-700 dark:font-bold">Expenses Tracking</a>
+                        <div class=" container flex flex-col text-center p-6 my-2 shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[500px] max-h-[500px]">
+                            <a href="#" class="py-3 px-5 bg-gray-100 dark:text-white dark:bg-gray-700 font-bold text-center">Expenses Tracking</a>
                             <canvas class="container flex p-10 dark:bg-gray-900" id="chartDoughnut"></canvas>
                           </div>
                           
@@ -93,8 +107,8 @@
                           </script>
                     
                     <!--goals-->
-                    <div class="container flex flex-col  p-2 my-2 mx-auto shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[500px] max-h-[500px]"> 
-                        <a href="#" class="py-3 px-5 bg-gray-100 dark:bg-gray-700 dark:text-white dark:font-bold text-center">Goals Tracking</a>
+                    <div class="container flex flex-col  p-6 my-2 mx-auto shadow-lg rounded-lg overflow-hidden bg-gray-200 dark:bg-gray-900 max-w-[500px] max-h-[500px]"> 
+                        <a href="#" class="py-3 px-5 bg-gray-100 dark:bg-gray-700 dark:text-white font-bold text-center">Goals Tracking</a>
                         <div class="shadow p-2 dark:text-white">Buy BMW<br>Goal: $50000<br>Saved: $22500<br>
                             <div class="w-full bg-gray-50 rounded-full dark:bg-gray-700 shadow">
                                 <div class="bg-lime-500 text-xs font-medium text-gray-50 text-center p-0.5 leading-none rounded-full" style="width: 45%"> 45%</div>
@@ -111,8 +125,8 @@
                 <!-- upcoming bills and transactions-->
                 <div class=" container flex flex-col space-x-2 mx-4 px-2">
                     <!-- Transcation activity-->
-                    <div class="container flex flex-col p-2 my-2 mx-auto shadow-lg rounded-lg overflow-hidden dark:bg-gray-900 dark:border-solid dark:border-white max-w-[1200px]"> 
-                        <a href="#" class="py-3 px-5 bg-gray-100 text-center dark:text-2xl dark:font-bold dark:text-white dark:bg-gray-700">Latest Expenses</a>
+                    <div class="container flex flex-col p-2 my-2 mx-auto shadow-lg rounded-lg overflow-hidden dark:bg-gray-900 dark:border-solid dark:border-white max-w-[1200px] bg-gray-200"> 
+                        <a href="#" class="py-3 px-5 bg-gray-100 text-center dark:text-2xl font-bold dark:text-white dark:bg-gray-700">Latest Expenses</a>
                             <div class="overflow-x-auto sm:-mx-6 lg:-mx-8 ">
                               <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8 ">
                                 <div class="overflow-hidden ">
@@ -158,51 +172,7 @@
                     </div>
                     <!--End of Latest transactions-->
                     <!--Upcoming expenses -->
-                    <div class="container flex flex-col p-2 my-2 mb-16 mx-auto shadow-lg rounded-lg overflow-hidden dark:bg-gray-900 dark:border-solid dark:border-white max-w-[1200px]"> 
-                        <a href="#" class="py-3 px-5 bg-gray-100 text-center dark:text-2xl dark:font-bold dark:text-white dark:bg-gray-700">Upcoming Expenses</a>
-                            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                              <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
-                                <div class="overflow-hidden">
-                                  <table class="min-w-full text-left text-sm font-light dark:text-gray-400">
-                                    <thead
-                                      class="border-b bg-white font-medium dark:bg-gray-700 dark:text-gray-400">
-                                      <tr>
-                                        <th scope="col" class="px-6 py-4">Date</th>
-                                        <th scope="col" class="px-6 py-4">Payee</th>
-                                        <th scope="col" class="px-6 py-4">Category</th>
-                                        <th scope="col" class="px-6 py-4">Amount</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr
-                                        class="border-b bg-neutral-100 dark:bg-gray-900 dark:border-gray-700">
-                                        <td class="whitespace-nowrap px-6 py-4 font-medium">01/03/2024</td>
-                                        <td class="whitespace-nowrap px-6 py-4 dark:text-white">Bank</td>
-                                        <td class="whitespace-nowrap px-6 py-4 dark:text-white">Loan</td>
-                                        <td class="whitespace-nowrap px-6 py-4 dark:text-white">$400</td>
-                                      </tr>
-                                      <tr
-                                        class="border-b bg-white dark:bg-gray-900 dark:border-gray-700 ">
-                                        <td class="whitespace-nowrap px-6 py-4 font-medium">10/03/2024</td>
-                                        <td class="whitespace-nowrap px-6 py-4 dark:text-white">Electricity ltd</td>
-                                        <td class="whitespace-nowrap px-6 py-4 dark:text-white">Bills</td>
-                                        <td class="whitespace-nowrap px-6 py-4 dark:text-white">$112</td>
-                                      </tr>
-                                      <tr
-                                      class="border-b bg-neutral-100 dark:bg-gray-900 dark:border-gray-700">
-                                      <td class="whitespace-nowrap px-6 py-4 font-medium">10/03/2024</td>
-                                      <td class="whitespace-nowrap px-6 py-4 dark:text-white">Netflix</td>
-                                      <td class="whitespace-nowrap px-6 py-4 dark:text-white">Entertainment</td>
-                                      <td class="whitespace-nowrap px-6 py-4 dark:text-white">$20</td>
-                                    </tr>
-                                     
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
+                   
                     <!--End of Upcoming expenses Table-->
                 </div>
             </div>
